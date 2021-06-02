@@ -90,6 +90,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .site-logo__img {
   display: block;
@@ -114,6 +115,19 @@ body {
 }
 .site-header__link:hover {
   box-shadow: inset 0px -3px 0px var(--box-shadow);
+}
+.navbar-toggler {
+  display: none;
+  position: absolute;
+  right: 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: url(../images/navbar-toggler.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 24px;
+  height: 24px;
 }
 
 /* FOOTER */
@@ -642,13 +656,56 @@ body {
     padding-right: 16px;
     padding-left: 16px;
   }
+
+  /* HEDAER */
+  .navbar-toggler {
+    display: block;
+  }
+  .site-header__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateX(100%);
+    flex-direction: column;
+    padding: 100px 128px;
+    background-color: #f0f8fff5;
+    align-items: center;
+  }
+  .site-header__link {
+    font-size: 30px;
+    line-height: 60px;
+  }
+  .site-header__item:not(:last-child) {
+    margin-right: 0;
+  }
   /* HERO */
   .hero__title {
     width: 343px;
   }
 
-  /* MAC */
+  .hero-progress__title {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background: #ff7300;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--white);
+  }
+  .hero-progress__text {
+    padding: 10px 15px;
+    background: #f4f7f8;
+    border-radius: 5px;
 
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .hero-progress::after {
+    bottom: -18px;
+  }
+  /* MAC */
   .mac__big {
     display: none;
   }
@@ -658,6 +715,16 @@ body {
   }
   .mac__list {
     grid-template-columns: 1fr;
+  }
+
+  /* GROUP */
+  .group-item:last-child {
+    flex-direction: column;
+  }
+
+  /* TAGS */
+  .tags__list {
+    flex-direction: column;
   }
   /* CITY */
   .city__list {
