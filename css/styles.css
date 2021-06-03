@@ -727,6 +727,10 @@ body {
     flex-direction: column;
   }
   /* CITY */
+  .city {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
   .city__list {
     grid-template-columns: 1fr 1fr;
   }
@@ -745,21 +749,47 @@ body {
     width: 100%;
     border: none;
     outline: none;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
+    background: transparent;
   }
   .footer-head {
     display: none;
   }
+  .footer-title::after {
+    content: '';
+    background-image: url(../images/arrow.svg);
+    width: 30px;
+    height: 30px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
   .footer-list {
     flex-direction: column;
+    margin: 0;
+    flex: 1;
   }
   .footer__list {
     padding: 0 18px;
     margin: 0;
-    background-color: white;
+    background-color: transparent;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+  }
+  .footer-item:not(:last-child) {
+    margin-right: 0px;
+  }
+  .main-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .footer-bottom {
+    position: relative;
+  }
+  .footer-bottom__list {
+    position: absolute;
+    top: -30px;
+    left: 42px;
   }
 }
