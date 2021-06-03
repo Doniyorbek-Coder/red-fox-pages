@@ -653,6 +653,7 @@ body {
 
 @media only screen and (max-width: 375px) {
   .container {
+    max-width: 407px;
     padding-right: 16px;
     padding-left: 16px;
   }
