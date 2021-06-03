@@ -734,4 +734,32 @@ body {
     width: 164px;
     height: 120px;
   }
+
+  /* FOOTER */
+
+  .footer-title {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .footer-head {
+    display: none;
+  }
+  .footer-list {
+    flex-direction: column;
+  }
+  .footer__list {
+    padding: 0 18px;
+    margin: 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 }

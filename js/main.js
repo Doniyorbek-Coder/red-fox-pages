@@ -12,3 +12,18 @@ for (i = 0; i < acc.length; i++) {
     }
   })
 }
+
+var bcc = document.getElementsByClassName('footer-title')
+var j
+
+for (j = 0; j < bcc.length; j++) {
+  bcc[j].addEventListener('click', function () {
+    this.classList.toggle('active')
+    var footer__list = this.nextElementSibling
+    if (footer__list.style.maxHeight) {
+      footer__list.style.maxHeight = null
+    } else {
+      footer__list.style.maxHeight = footer__list.scrollHeight + 'px'
+    }
+  })
+}
